@@ -90,3 +90,10 @@ a {
 .sign-log {
     color: blue;
 }
+
+#logout {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+}

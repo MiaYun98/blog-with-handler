@@ -1,12 +1,5 @@
-<header>
-    <ul class="tabs">
-        <li class="tab-element"><a href="/">Home</a></li>
-        <li class="tab-element"><a href="/dashboard">Dashboard</a></li>
-        <li class="tab-element"><a href="/login">Login</a></li>
-        <li class="tab-element"><a href="/">logout</a></li>
-    </ul>
-    <p class="tag-box">Dashboard</p>
-</header>
 <main>
-
+    {{#each blogs as |Blog| }}
+    {{> blog-details}}
+    {{/each}}
 </main>
