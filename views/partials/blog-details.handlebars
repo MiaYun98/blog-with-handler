@@ -1,10 +1,7 @@
 <section class="card">
-  <a href="/blogs/{{id}}">
-    <header>{{title}}</header>
-
+    <h1 class="cardhead">{{title}}</h1>
     <div class="card-body">
-      <p>content: {{content}}</p>
-      <p>username: {{User.userName}}</p>
+        <h3>{{content}}</h3>
     </div>
-  </a>
+    <p class="card-tag">At {{createdAt}} created by {{User.UserName}} </p> 
 </section>

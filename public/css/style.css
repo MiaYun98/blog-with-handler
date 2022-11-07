@@ -87,6 +87,34 @@ a {
     cursor: pointer;
 }
 
+.card {
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+    border-radius: 20px;
+}
+
+.cardhead{ 
+    background-color: burlywood;
+    color: #6b4d07;
+    padding: 1%;
+    border-radius: 20px 20px 0  0;
+}
+
+.card-body {
+    padding: 1.5%;
+}
+
+.card-tag {
+    text-align: right;
+    padding: 0.5%;
+}
+
+.card-link {
+    color: black;
+}
+
 .sign-log {
     color: blue;
 }

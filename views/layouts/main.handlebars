@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,21 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
     <header>
-    <ul class="tabs">
-        <li class="tab-element"><a href="/">Home</a></li>
-        <li class="tab-element"><a href="/dashboard">Dashboard</a></li>
-        <li class="tab-element"><a href="/login">Login</a></li>
-        <li class="tab-element"><button id="logout">logout</button></li>
-    </ul>
-    <p class="tag-box">Welcome!</p>
-
-</header>
+        <nav class="tabs">
+            <a href="/" class="tab-element">Home</a>
+            <a href="/dashboard/" class="tab-element">Dashboard</a>
+            {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </nav>
     {{{body}}}
 
-<script src="js/logout.js"></script>
+    <script src="js/logout.js"></script>
 </body>
+
 </html>

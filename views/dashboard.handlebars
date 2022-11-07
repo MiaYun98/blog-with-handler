@@ -1,5 +1,20 @@
+<p class="tag-box">Welcome back {{blogUser.userName}}</p>
+</header>
 <main>
-    {{#each blogs as |Blog| }}
-    {{> blog-details}}
-    {{/each}}
+    <ul>
+        {{#each blogUser.Blogs}}
+        <li>
+            <a href="/dashboard/blog/{{id}}" class="card-link">
+                <section class="card">
+                    <h1 class="cardhead">{{title}}</h1>
+                    <div class="card-body">
+                        <h3>{{content}}</h3>
+                    </div>
+                    <p class="card-tag">At {{createdAt}} created by {{User.UserName}} </p>
+                </section>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    <a href="/dashboard/create">create</a>
 </main>
