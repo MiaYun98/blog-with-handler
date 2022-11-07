@@ -1,0 +1,23 @@
+<p class="tag-box">Comments</p>
+</header>
+<section class="card">
+    <h1 class="cardhead">{{blogComm.title}}</h1>
+    <div class="card-body">
+        <h3>{{blogComm.content}}</h3>
+    </div>
+    <p class="card-tag">At {{blogComm.createdAt}}</p>
+</section>
+<section class="comment">
+    {{#each blogComm.Comments}}
+    <section class="card">
+        <h1 class="cardhead"></h1>
+        <div class="comment-body">
+            <h3>{{comment}}</h3>
+            <p class="comment-tag">- {{commenter}} {{createdAt}}</p>
+        </div>
+    </section>
+    {{/each}}
+    {{#if loggedIn}}
+        <a href="/blog/comment/add/{{blogComm.id}}" class="add-btn">Add comment</a>
+    {{/if}}
+</section>

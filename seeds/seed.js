@@ -1,5 +1,5 @@
 const sequelize = require("../config/connection");
-const { User, Blog } = require("../models");
+const { User, Blog, Comment} = require("../models");
 
 const seed = async ()=> {
     await sequelize.sync({force:true});
@@ -29,6 +29,23 @@ const seed = async ()=> {
             title:"I want a nice shoes",
             content:"maybe the mmmm nice as possible",
             UserId:2
+        },
+    ])
+    const comments = await Comment.bulkCreate([
+        {
+            comment:"this is super nice",
+            BlogId: 1,
+            commenter: "Dave90"
+        },
+        {
+            comment:"nice to meet you too",
+            BlogId: 1,
+            commenter: "Dave90"
+        },
+        {
+            comment: "Nice to hear",
+            BlogId:2,
+            commenter: "Dave90"
         },
     ])
     console.log("seeded!")

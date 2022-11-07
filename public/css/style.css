@@ -104,11 +104,13 @@ a {
 
 .card-body {
     padding: 1.5%;
+    color: black;
 }
 
 .card-tag {
     text-align: right;
     padding: 0.5%;
+    color: black;
 }
 
 .card-link {
@@ -140,6 +142,24 @@ a {
     border: none;
 }
 
+.comment-body {
+    padding: 2.5%;
+}
+
+.comment-tag {
+    text-align: end;
+}
+
+.add-btn {
+    color: antiquewhite;
+    background-color: #6b4d07;
+    margin-top: 2.5%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1%;
+    border-radius: 20px;
+}
 .submit {
     font-size: 20px;
     margin: 0;
@@ -150,7 +170,12 @@ a {
     transform: translate(-50%, -50%);
 }
 
-#content {
+.editpage-btn {
+    text-align: center;
+    margin: 2.5%;
+}
+
+#content, #comment {
     font-size: 30px;
     width: 100%;
     border: none;

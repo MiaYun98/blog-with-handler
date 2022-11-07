@@ -4,13 +4,9 @@
     <ul>
         {{#each blogUser.Blogs}}
         <li>
-            <a href="/dashboard/blog/{{id}}" class="card-link">
+            <a href="/dashboard/blog/edit/{{id}}" class="card-link">
                 <section class="card">
-                    <h1 class="cardhead">{{title}}</h1>
-                    <div class="card-body">
-                        <h3>{{content}}</h3>
-                    </div>
-                    <p class="card-tag">At {{createdAt}}</p>
+                    <h1 class="cardhead">{{title}}</h1><p class="card-tag">At {{createdAt}}</p>
                 </section>
             </a>
         </li>

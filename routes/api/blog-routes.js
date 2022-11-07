@@ -40,4 +40,41 @@ router.post('/create', async (req, res) => {
     })
 });
 
+router.put('/edit', async (req, res) => {
+    if(!req.session.userInfo) {
+        return res.redirect('/login')
+    }
+    Blog.update({
+        title: req.body.title,
+        content: req.body.content,
+        UserId: req.session.userInfo.id,
+    },
+    {
+        where: {
+            id: req.session.blogNum
+        }
+    }).then(data => {
+        res.json(data);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({ err: err })
+    })
+});
+
+router.delete('/delete', async (req, res) => {
+    if(!req.session.userInfo) {
+        return res.redirect('/login')
+    }
+    Blog.destroy({
+        where: {
+            id: req.session.blogNum
+        }
+    }).then(data => {
+        res.json(data);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({ err: err })
+    })
+});
+
 module.exports = router;

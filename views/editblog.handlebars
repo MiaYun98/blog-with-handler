@@ -1,2 +1,15 @@
-    <p class="tag-box">Welcome! To the Tech Blog</p>
+<p class="tag-box">Edit Blog</p>
 </header>
+<form class="create-form">
+    <section class="card">
+        <input type="text" class="create-head" id="title" placeholder="title" value="{{plainBlog.title}}">
+        <div class="card-body">
+            <textarea name="content-part" id="content" placeholder="content here">{{plainBlog.content}}</textarea>
+        </div>
+    </section>
+    <div class="editpage-btn">
+        <button class="edit btn" type="submit" id="edit">edit</button>
+        <button class="del btn" data-blogId="{{id}}" id="delete">delete</button>
+    </div>
+</form>
+<script src="/js/edit.js"></script>
