@@ -68,8 +68,21 @@ router.get('/dashboard/:id', (req, res) => {
     })
 })
 
-router.get('/dashboard/create', (req, res) => {
-    res.render('createblog');
+router.get('/dashboard/blog/create', async (req, res) => {
+    try{ 
+        if(!req.session.loggedIn) {
+            return res.redirect("/");
+        }
+        res.render('createblog', {
+            loggedIn: req.session.loggedIn,
+            userInfo: req.session.userInfo
+        })
+    } catch(err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
 })
 
+// router.get('/dashboard')
+// router.get('/dashboard/blog/:id', )
 module.exports = router;

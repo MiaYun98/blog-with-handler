@@ -71,7 +71,7 @@ a {
     padding-bottom: 5%;
 }
 
-.form-input { 
+.form-input {
     font-size: 30px;
     margin: 2.5%;
 }
@@ -95,11 +95,11 @@ a {
     border-radius: 20px;
 }
 
-.cardhead{ 
+.cardhead {
     background-color: burlywood;
     color: #6b4d07;
     padding: 1%;
-    border-radius: 20px 20px 0  0;
+    border-radius: 20px 20px 0 0;
 }
 
 .card-body {
@@ -117,6 +117,43 @@ a {
 
 .sign-log {
     color: blue;
+}
+
+.create-button {
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    color: white;
+    margin: 2.5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 1%;
+    background-color: #6b4d07;
+    border-radius: 30px;
+}
+
+.create-head {
+    background-color: burlywood;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    border: none;
+}
+
+.submit {
+    font-size: 20px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#content {
+    font-size: 30px;
+    width: 100%;
+    border: none;
 }
 
 #logout {

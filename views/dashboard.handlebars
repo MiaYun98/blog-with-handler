@@ -1,4 +1,4 @@
-<p class="tag-box">Welcome back {{blogUser.userName}}</p>
+    <p class="tag-box">Welcome back {{blogUser.userName}}</p>
 </header>
 <main>
     <ul>
@@ -10,11 +10,11 @@
                     <div class="card-body">
                         <h3>{{content}}</h3>
                     </div>
-                    <p class="card-tag">At {{createdAt}} created by {{User.UserName}} </p>
+                    <p class="card-tag">At {{createdAt}}</p>
                 </section>
             </a>
         </li>
         {{/each}}
     </ul>
-    <a href="/dashboard/create">create</a>
+    <a href="/dashboard/blog/create" class="create-button">create</a>
 </main>
