@@ -11,27 +11,24 @@ router.get('/', (req, res) => {
     )
 })
 
-router.post('/create', async (req, res) => {
-    try{
-        const dbUserData = User.create({
-                userName: req.body.userName,
-                password: req.body.password
-        });
-
+router.post('/create', (req, res) => {
+    User.create({
+        userName: req.body.userName,
+        password: req.body.password
+    }).then(data => {
         req.session.userInfo = {
-            userName: dbUserData.userName,
-            id: dbUserData.id
+            userName: data.userName,
+            id: data.id
         }
 
         req.session.save(() => {
             req.session.loggedIn = true;
-            res.status(200).json(dbUserData);
+            res.status(200).json(data)
         })
-        
-    } catch (err) {
+    }).catch(err => {
         console.log(err); 
         res.status(500).json({err:err})
-    }
+    })
 })
 
 router.post('/login', async (req, res) => {
